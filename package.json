@@ -1,0 +1,25 @@
+{
+  "name": "stpd_japan_map",
+  "version": "1.0.0",
+  "description": "St.Patrick's Day Parade in Japan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/38fanjia/stpd_japan_map.git"
+  },
+  "keywords": [
+    "d3js"
+  ],
+  "author": "38fanjia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/38fanjia/stpd_japan_map/issues"
+  },
+  "homepage": "https://github.com/38fanjia/stpd_japan_map#readme",
+  "dependencies": {
+    "d3": "^4.12.0"
+  }
+}
