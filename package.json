@@ -5,5 +5,13 @@
   "main": "index.js",
   "repository": "https://github.com/38fanjia/StPatricksDay.git",
   "author": "38fanjia <38fanjia+github@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/react": "^3.4.10",
+    "babel-core": "^6.26.3"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
 }
