@@ -1,14 +1,9 @@
 {
-  "name": "stpd_japan",
-  "description": "St.Patrick's Day Parade in Japan",
-  "scripts": {
-    "dev": "next"
-  },
-  "author": "38fanjia",
-  "license": "UNLICENSED",
-  "dependencies": {
-    "next": "^6.1.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
-  }
+  "name": "StPatricksDay",
+  "version": "1.0.0",
+  "description": "St.Patrick's Day Palade in Japan",
+  "main": "index.js",
+  "repository": "https://github.com/38fanjia/StPatricksDay.git",
+  "author": "38fanjia <38fanjia+github@gmail.com>",
+  "license": "MIT"
 }
