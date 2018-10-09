@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
@@ -24,10 +25,14 @@ module.exports = {
   optimization: {
     minimizer: [
       new UglifyJsPlugin()
-    ]
+    ],
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    port: 9000
+    port: 9000,
+    hot: true
   }
 }
