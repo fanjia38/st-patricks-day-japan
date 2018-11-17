@@ -3,8 +3,9 @@ export const paradeData = [
     id: 1,
     name: 'セント・パトリックス・デイ・パレード東京',
     prefecture: '東京',
-    start: '201803181300',
-    end: '201803181500',
+    start: '20180318T1300',
+    end: '20180318T1500',
+    description: 'test',
     contact: {
       url: 'https://www.inj.or.jp/',
       twitter: 'https://twitter.com/injtokyo',
@@ -15,8 +16,9 @@ export const paradeData = [
     id: 2,
     name: 'セントパトリックデーパレード横浜元町',
     prefecture: '神奈川',
-    start: '201803101300',
-    end: '201803101500',
+    start: '20180310T1300',
+    end: '20180310T1500',
+    description: 'test',
     contact: {
       url: 'http://stpdy.com',
       twitter: 'https://twitter.com/stpd_yokohama',
