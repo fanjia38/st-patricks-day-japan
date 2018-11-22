@@ -9,12 +9,12 @@ export default class extends React.Component {
   }
   render () {
     return (
-      <div>
-        <a href={this.props.url} target="_blank"><FontAwesomeIcon icon={home} /></a>
-        <a href={this.props.twitter} target="_blank"><FontAwesomeIcon icon={twitter} /></a>
-        <a href={this.props.facebook} target="_blank"><FontAwesomeIcon icon={facebook} /></a>
-        <a href={this.props.instagram} target="_blank"><FontAwesomeIcon icon={instagram} /></a>
-      </div>
+      <ul>
+        <li><a href={this.props.url} target="_blank"><FontAwesomeIcon icon={home} /></a></li>
+        <li><a href={this.props.twitter} target="_blank"><FontAwesomeIcon icon={twitter} /></a></li>
+        <li><a href={this.props.facebook} target="_blank"><FontAwesomeIcon icon={facebook} /></a></li>
+        <li><a href={this.props.instagram} target="_blank"><FontAwesomeIcon icon={instagram} /></a></li>
+      </ul>
     )
   }
 }
