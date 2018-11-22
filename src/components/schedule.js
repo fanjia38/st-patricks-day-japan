@@ -7,7 +7,7 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <p>{moment(this.props.start).format('YYYY/MM/DD HH:mm')}</p>
+      <p>{moment(this.props.start).format('YYYY/MM/DD HH:mm')} 〜 {moment(this.props.end).format('YYYY/MM/DD HH:mm')}</p>
     )
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-import Schedule from '../atoms/schedule'
+import Schedule from './schedule'
 import Contact from './contact'
 
 const ParadeItem = (items) => {
-  return items.map(({id, name, prefecture, start, end, contact}) => {
+  return items.map(({id, name, prefecture, start, end, description, contact}) => {
     return (
       <li key={id}>
         <h3>{name}</h3>
@@ -12,11 +12,12 @@ const ParadeItem = (items) => {
           end={end}
         />
         <p>{prefecture}</p>
+        <p>{description}</p>
         <Contact
-          url={url}
-          twitter={twitter}
-          facebook={facebook}
-          instagram={instagram}
+          url={contact.url}
+          twitter={contact.twitter}
+          facebook={contact.facebook}
+          instagram={contact.instagram}
         />
       </li>
     )
