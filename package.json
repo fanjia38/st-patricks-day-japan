@@ -1,9 +1,9 @@
 {
-  "name": "stpat-map",
+  "name": "StPatricksDay",
   "version": "1.0.0",
   "description": "St.Patrick's Day Palade in Japan",
   "main": "index.js",
-  "repository": "https://github.com/38fanjia/stpat-map.git",
+  "repository": "https://github.com/38fanjia/StPatricksDay.git",
   "author": "38fanjia <38fanjia+github@gmail.com>",
   "license": "MIT",
   "scripts": {
