@@ -1,3 +1,5 @@
+// パレード情報
+// TODO: プロジェクト内にデータを持つのではなく、 API で取得するようにしたい
 export const paradeData = [
   {
     id: 1,

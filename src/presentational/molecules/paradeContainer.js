@@ -7,7 +7,7 @@ class ParadeContainer extends Component {
   constructor() {
     super()
 
-    // 自身が状態を保持する
+    // パレード情報の取得(後々 API 経由でデータ取得するようにしたい)
     this.state = {
       items: paradeData
     }
