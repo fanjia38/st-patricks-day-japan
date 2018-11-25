@@ -10,10 +10,10 @@ export default class extends React.Component {
   render () {
     return (
       <ul>
-        <li><a href={this.props.url} target="_blank"><FontAwesomeIcon icon={home} /></a></li>
-        <li><a href={this.props.twitter} target="_blank"><FontAwesomeIcon icon={twitter} /></a></li>
-        <li><a href={this.props.facebook} target="_blank"><FontAwesomeIcon icon={facebook} /></a></li>
-        <li><a href={this.props.instagram} target="_blank"><FontAwesomeIcon icon={instagram} /></a></li>
+        <li><a href={this.props.items.url} target="_blank"><FontAwesomeIcon icon={home} /></a></li>
+        <li><a href={this.props.items.twitter} target="_blank"><FontAwesomeIcon icon={twitter} /></a></li>
+        <li><a href={this.props.items.facebook} target="_blank"><FontAwesomeIcon icon={facebook} /></a></li>
+        <li><a href={this.props.items.instagram} target="_blank"><FontAwesomeIcon icon={instagram} /></a></li>
       </ul>
     )
   }

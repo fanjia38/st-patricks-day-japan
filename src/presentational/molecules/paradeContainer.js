@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ParadeList from './paradeList'
 
-import { paradeData } from '../data/paradeData'
+import { paradeData } from '../../data/paradeData'
 
 class ParadeContainer extends Component {
   constructor() {

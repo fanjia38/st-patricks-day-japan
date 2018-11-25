@@ -1,6 +1,6 @@
 import React from 'react'
 import Schedule from './schedule'
-import Contact from './contact'
+import ContactList from './contactList'
 
 const ParadeItem = (items) => {
   return items.map(({id, name, prefecture, start, end, description, contact}) => {
@@ -13,12 +13,7 @@ const ParadeItem = (items) => {
         />
         <p>{prefecture}</p>
         <p>{description}</p>
-        <Contact
-          url={contact.url}
-          twitter={contact.twitter}
-          facebook={contact.facebook}
-          instagram={contact.instagram}
-        />
+        <ContactList items={contact} />
       </li>
     )
   })
