@@ -1,3 +1,11 @@
 import React from 'react'
 
-export default () => <p>&copy; 38fanjia</p>
+const Footer = () => {
+  return (
+    <footer>
+      <p>&copy; 38fanjia</p>
+    </footer>
+  )
+}
+
+export default Footer
