@@ -13,8 +13,11 @@ const Header = () => {
 const HeaderWrapper = styled.header`
   background-color: #1e8567;
   color: #fff;
+  padding: 10px 9px;
 `
 const Title = styled.h1`
+  margin: 0;
+  padding-bottom: 5px;
   font-size: 26px;
 `
 const Description = styled.p`
