@@ -16,6 +16,7 @@ const FooterWrapper = styled.footer`
 const Copyright = styled.p`
   font-size: 14px;
   text-align: center;
+  padding: 50px 0 9px;
 `
 
 export default Footer
