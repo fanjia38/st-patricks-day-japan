@@ -1,24 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
+
+import ParadeTitle from '../atoms/paradeTitle'
 import Schedule from './schedule'
-import Contact from './contact'
+import ContactList from './contactList'
 
 const ParadeItem = (items) => {
   return items.map(({id, name, prefecture, start, end, description, contact}) => {
     return (
       <li key={id}>
-        <h3>{name}</h3>
+        <ParadeTitle
+          title={name}
+        />
         <Schedule
           start={start}
           end={end}
         />
         <p>{prefecture}</p>
         <p>{description}</p>
-        <Contact
-          url={contact.url}
-          twitter={contact.twitter}
-          facebook={contact.facebook}
-          instagram={contact.instagram}
-        />
+        <ContactList items={contact} />
       </li>
     )
   })
@@ -26,10 +26,14 @@ const ParadeItem = (items) => {
 
 const ParadeList = (props) => {
   return (
-    <ul>
+    <List>
       {ParadeItem(props.items)}
-    </ul>
+    </List>
   )
 }
+
+const List = styled.ul`
+  list-style-type: none;
+`
 
 export default ParadeList
