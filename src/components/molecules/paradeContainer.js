@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import ParadeList from './paradeList'
+import styled from 'styled-components'
 
+import ParadeItem from './paradeItem';
 import { paradeData } from '../../data/paradeData'
 
 class ParadeContainer extends Component {
@@ -15,9 +16,18 @@ class ParadeContainer extends Component {
 
   render() {
     return (
-      <ParadeList items={this.state.items} />
+      <List>
+        {ParadeItem(this.state.items)}
+      </List>
     )
   }
 }
+
+const List = styled.div`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+`
 
 export default ParadeContainer

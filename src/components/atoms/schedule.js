@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import format from 'date-fns/format'
 
 export default class extends React.Component {
@@ -13,7 +14,13 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <p>{this.state.start} 〜 {this.state.end}</p>
+      <Schedule>{this.state.start} 〜 {this.state.end}</Schedule>
     )
   }
 }
+
+const Schedule = styled.p`
+  font-size: 12px;
+  margin: 8px 0;
+  text-align: right;
+`
