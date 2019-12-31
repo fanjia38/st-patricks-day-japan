@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterWrapper>
       <Copyright>&copy; 38fanjia</Copyright>
@@ -18,5 +18,3 @@ const Copyright = styled.p`
   text-align: center;
   padding: 50px 0 9px;
 `
-
-export default Footer
