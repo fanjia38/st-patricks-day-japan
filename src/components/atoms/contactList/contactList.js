@@ -1,25 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Link from '../atoms/Link'
-
-const ContactItem = (items) => {
-  return items.map(({type, url}, index) => {
-    return (
-      <Item key={index}>
-        <Link
-          text={type}
-          url={url}
-        />
-      </Item>
-    )
-  })
-}
-
 const ContactList = (props) => {
   return (
     <List>
-      {ContactItem(props.items)}
+      props.contacts.map((item, index) => {
+        <Item key={index}><a href={item.url}>{item.name}</a></Item>
+      })
     </List>
   )
 }

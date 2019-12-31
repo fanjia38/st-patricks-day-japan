@@ -23,6 +23,7 @@ const ParadeItem = (items) => {
 const Item = styled.div`
   padding: 24px 8px;
   flex-basis: 50%;
+  width: 50%;
 
   &:nth-child(odd) {
     padding-right: 60px;
