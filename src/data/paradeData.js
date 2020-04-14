@@ -5,8 +5,8 @@ export const paradeData = [
     id: 1,
     name: 'セント・パトリックス・デイ・パレード東京',
     prefecture: '東京',
-    start: '20190317T1500',
-    end: '20190317T1700',
+    start: '2019-03-17 15:00',
+    end: '2019-03-17 17:00',
     description: 'description',
     contact: [
       {
@@ -27,8 +27,8 @@ export const paradeData = [
     id: 2,
     name: 'セントパトリックデーパレード横浜元町',
     prefecture: '神奈川',
-    start: '20180316T1300',
-    end: '20180316T1500',
+    start: '2018-03-16 3:00',
+    end: '2018-03-16 15:00',
     description: 'description',
     contact: [
       {
@@ -49,8 +49,8 @@ export const paradeData = [
     id: 3,
     name: 'アイラブアイルランド・フェスティバル',
     prefecture: '東京・代々木公園',
-    start: '20190316T1000',
-    end: '20190316T1700',
+    start: '2019-03-16 10:00',
+    end: '2019-03-16 17:00',
     description: 'description',
     contact: [
       {
