@@ -15,7 +15,7 @@ export const ParadeDetail = (props) => {
     const from = format(parsedStart, 'yyyy/MM/dd HH:mm')
     const to = format(parsedEnd, isSame ? 'HH:mm' : 'yyyy/MM/dd HH:mm')
 
-    setSchedule(`${from} 〜 ${to}`)
+    setSchedule(`${from}〜${to}`)
   }, [start, end])
 
   return (
@@ -29,17 +29,12 @@ export const ParadeDetail = (props) => {
 }
 
 const Detail = styled.div`
-  padding: 24px 8px;
-  flex-basis: 50%;
-  box-sizing: border-box;
-  width: 50%;
-
-  &:nth-child(odd) {
-    padding-right: 60px;
-  }
-  &:nth-child(even) {
-    padding-left: 60px;
-  }
+  margin: 24px;
+  padding: 24px;
+  max-width: 540px;
+  width: 100%;
+  border-right: 1px solid #1e8567;
+  border-bottom: 1px solid #1e8567;
 `
 
 const Title = styled.h2`

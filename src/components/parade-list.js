@@ -17,9 +17,8 @@ export const ParadeList = () => {
 }
 
 const ListWrapper = styled.div`
-  list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 24px 0;
   display: flex;
   flex-wrap: wrap;
 `
