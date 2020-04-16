@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {format, parse, isSameDay} from 'date-fns'
 import {ParadeContact} from './parade-contact'
+import { Calendar, Maker } from './icon'
 
 export const ParadeDetail = (props) => {
   const {name, start, end, prefecture, contact} = props.paradeInfo
@@ -21,8 +22,8 @@ export const ParadeDetail = (props) => {
   return (
     <Detail>
       <Title>{name}</Title>
-      <Schedule>{schedule}</Schedule>
-      <Prefecture>{prefecture}</Prefecture>
+      <Schedule><StyledCalendar />{schedule}</Schedule>
+      <Prefecture><StyledMarker />{prefecture}</Prefecture>
       <ParadeContact contact={contact} />
     </Detail>
   )
@@ -48,6 +49,14 @@ const Schedule = styled.p`
   text-align: right;
 `
 
+const StyledCalendar = styled(Calendar)`
+  margin: 8px;
+`
+
 const Prefecture = styled.p`
   margin: 8px 0;
+`
+
+const StyledMarker = styled(Maker)`
+  margin: 8px
 `
