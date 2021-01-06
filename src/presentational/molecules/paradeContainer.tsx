@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 import ParadeList from './paradeList'
 
-import { paradeData } from '../../data/paradeData'
-
-const ParadeContainer = () => {
-  const items = paradeData
-
+const ParadeContainer = ({list}) => {
   return (
-    <ParadeList items={items} />
+    <ParadeList items={list} />
   )
 }
 
