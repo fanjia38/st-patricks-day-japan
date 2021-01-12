@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "next build",
     "dev": "next dev",
-    "start": "next strat",
+    "start": "next start",
     "type-check": "tsc -p ."
   },
   "devDependencies": {
