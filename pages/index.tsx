@@ -1,42 +1,23 @@
-import styled from 'styled-components'
-import ParadeContainer from '../src/presentational/molecules/paradeContainer'
+import { Box, Center, Text, Heading } from '@chakra-ui/react'
+
+import ParadeList from '../components/parade-list'
 
 const Index = ({list}) => {
   return (
     <>
-      <Header>
-        <Title>セント・パトリックス・デー・パレード一覧</Title>
-        <Description>日本国内で開催されているセントパトリックスデーのイベントをまとめました。</Description>
-      </Header>
-      <ParadeContainer list={list} />
-      <Footer>
-        <Copyright>&copy; 38fanjia</Copyright>
-      </Footer>
+      <Box p={4} bg="green.500" color="white">
+        <Heading size="lg" mb={4}>セント・パトリックス・デー・パレード一覧</Heading>
+        <Text fontSize="sm">日本国内で開催されているセントパトリックスデーのイベントをまとめました。</Text>
+      </Box>
+      <ParadeList list={list} />
+      <Center p={4} bg="green.500" color="white">
+        <Text fontSize="sm" as="i">&copy; 38fanjia</Text>
+      </Center>
     </>
   )
 }
 
 export default Index
-
-const Header = styled.header`
-  background-color: #1e8567;
-  color: #fff;
-`
-const Title = styled.h1`
-  font-size: 26px;
-`
-const Description = styled.p`
-  font-size: 14px;
-`
-
-const Footer = styled.footer`
-  background-color: #1e8567;
-  color: #fff;
-`
-const Copyright = styled.p`
-  font-size: 14px;
-  text-align: center;
-`
 
 // パレード情報
 // TODO: プロジェクト内にデータを持つのではなく、 API で取得するようにする？
