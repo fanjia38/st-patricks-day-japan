@@ -1,8 +1,8 @@
 import { Stack } from '@chakra-ui/react'
 
-import ParadeItem from './paradeItem'
+import ParadeItem from './parade-item'
 
-function ParadeContainer ({list}) {
+function ParadeList ({list}) {
   return (
     <Stack spacing="24px" p={8}>
       {list.map((item, index) => (
@@ -12,4 +12,4 @@ function ParadeContainer ({list}) {
   )
 }
 
-export default ParadeContainer
+export default ParadeList

@@ -1,7 +1,7 @@
 import { Box, Stack, Heading, Text } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
-import ContactList from './contactList'
+import ContactList from './contact-list'
 
 function ParadeItem ({item}) {
   const {id, name, prefecture, start, end, description, contact} = item

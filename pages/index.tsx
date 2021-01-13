@@ -1,6 +1,6 @@
 import { Box, Center, Text, Heading } from '@chakra-ui/react'
 
-import ParadeContainer from '../src/presentational/molecules/paradeContainer'
+import ParadeList from '../components/parade-list'
 
 const Index = ({list}) => {
   return (
@@ -9,7 +9,7 @@ const Index = ({list}) => {
         <Heading size="lg" mb={4}>セント・パトリックス・デー・パレード一覧</Heading>
         <Text fontSize="sm">日本国内で開催されているセントパトリックスデーのイベントをまとめました。</Text>
       </Box>
-      <ParadeContainer list={list} />
+      <ParadeList list={list} />
       <Center p={4} bg="green.500" color="white">
         <Text fontSize="sm" as="i">&copy; 38fanjia</Text>
       </Center>
