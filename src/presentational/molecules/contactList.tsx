@@ -1,35 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import { HStack, Link } from '@chakra-ui/react'
 
-import Link from '../atoms/Link'
-
-const ContactItem = (items) => {
-  return items.map(({type, url}, index) => {
-    return (
-      <Item key={index}>
-        <Link
-          text={type}
-          url={url}
-        />
-      </Item>
-    )
-  })
-}
-
-const ContactList = (props) => {
+function ContactList({items}) {
   return (
-    <List>
-      {ContactItem(props.items)}
-    </List>
+    <HStack>
+      {items.map((item, index) => (
+        <Link key={index} href={item.url}>{item.type}</Link>
+      ))}
+    </HStack>
   )
 }
-
-const List = styled.ul`
-  list-style-type: none;
-  display: flex;
-`
-const Item = styled.li`
-  padding-left: 15px;
-`
 
 export default ContactList
