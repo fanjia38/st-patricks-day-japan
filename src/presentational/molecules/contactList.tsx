@@ -1,4 +1,3 @@
-import React from 'react'
 import { HStack, Box, Link, IconButton } from '@chakra-ui/react'
 import { FaHome, FaTwitter, FaFacebookF } from 'react-icons/fa'
 
@@ -16,7 +15,7 @@ function ContactList({items}) {
   }
 
   return (
-    <HStack>
+    <HStack mt={4}>
       {items.map((item, index) => (
         <Box key={index}>
           <Link key={index} href={item.url}>

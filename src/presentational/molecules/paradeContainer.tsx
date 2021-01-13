@@ -1,9 +1,14 @@
-import React, { Component } from 'react'
-import ParadeList from './paradeList'
+import { Stack } from '@chakra-ui/react'
 
-const ParadeContainer = ({list}) => {
+import ParadeItem from './paradeItem'
+
+function ParadeContainer ({list}) {
   return (
-    <ParadeList items={list} />
+    <Stack spacing="24px" p={8}>
+      {list.map((item, index) => (
+        <ParadeItem key={index} item={item} />
+      ))}
+    </Stack>
   )
 }
 
