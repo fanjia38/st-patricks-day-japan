@@ -1,4 +1,5 @@
 import { WrapItem, Box, Stack, HStack, Heading, Text, Badge } from '@chakra-ui/react'
+import {useMemo} from 'react'
 import dayjs from 'dayjs'
 
 import ContactList from './contact-list'
@@ -6,29 +7,39 @@ import ContactList from './contact-list'
 function ParadeItem ({item}) {
   const {id, name, prefecture, start, end, isCancel, description, contact} = item
 
-  const getScheduleText = (start, end) => {
+  const startDay = useMemo(() => dayjs(start), [start])
+  const endDay = useMemo(() => dayjs(end), [end])
+
+  const shceduleText = useMemo(() => {
     if (!start && !end) {
       return '-'
     }
 
-    const startDay = dayjs(start)
-    const endDay = dayjs(end)
-    const isSameDay = startDay.date() === endDay.date()
+    const isSameDay = startDay.date() === endDay.date() || !end
+    const hasTime = startDay.hour() !== 0 && endDay.hour() !== 0
 
-    const formatedStart = startDay.format('YYYY/MM/DD HH:mm')
-    const formatedEnd = isSameDay ? endDay.format('HH:mm') : end && endDay.format('YYYY/MM/DD HH:mm')
+    const format = hasTime ? 'YYYY/MM/DD HH:mm' : 'YYYY/MM/DD'
 
-    return `${formatedStart}~${formatedEnd}`
-  }
+    const formatedStart = startDay.format(format)
+    const formatedEnd = isSameDay ? end && endDay.format('HH:mm') : end && endDay.format(format)
+    const isBetween = !isSameDay || hasTime
+
+    return `${formatedStart}${isBetween ? '~' : ''}${formatedEnd}`
+  }, [item])
+
+  const isEnd = useMemo(() => (
+    !isCancel && (end ? dayjs().isAfter(endDay) : dayjs().isAfter(startDay))
+  ), [item])
 
   return (
     <WrapItem key={id} p={4} borderWidth={1} borderRadius="lg" w="500px">
       <Box width="100%">
         <Heading size="md">{name}</Heading>
-        <Text mt={4} align="right">{getScheduleText(start, end)}</Text>
-        <HStack justify="end">
+        <HStack justify="flex-end" mt="4">
           {isCancel && <Badge colorScheme="yellow">開催中止</Badge>}
-          <Badge>{prefecture}</Badge>
+          {isEnd && <Badge>イベント終了</Badge>}
+          <Badge colorScheme="green">{prefecture}</Badge>
+          <Text ml={4} align="right">{shceduleText}</Text>
         </HStack>
         <Text>{description}</Text>
         <ContactList items={contact} />

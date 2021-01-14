@@ -144,8 +144,8 @@ export async function getStaticProps() {
           name: 'セントパトリックス・デー・フェスティバル名古屋',
           prefecture: '愛知',
           description: 'description',
-          start: '20200314T1215',
-          end: '',
+          start: '20200314T1200',
+          end: '20200314T1500',
           isCancel: true,
           contact: [
             {
@@ -253,7 +253,7 @@ export async function getStaticProps() {
           name: 'St. Patrick\'s Dayの集い',
           prefecture: '東京',
           description: 'description',
-          start: '20200321',
+          start: '',
           end: '',
           contact: [
             {
