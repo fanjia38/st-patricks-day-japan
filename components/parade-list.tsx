@@ -1,14 +1,14 @@
-import { HStack } from '@chakra-ui/react'
+import { Wrap } from '@chakra-ui/react'
 
 import ParadeItem from './parade-item'
 
 function ParadeList ({list}) {
   return (
-    <HStack spacing="24px" p={8}>
-      {list.map((item, index) => (
-        <ParadeItem key={index} item={item} />
+    <Wrap spacing="8" p="8" direction="row" wrap="wrap">
+      {list.map((item) => (
+        <ParadeItem key={item.id} item={item} />
       ))}
-    </HStack>
+    </Wrap>
   )
 }
 
