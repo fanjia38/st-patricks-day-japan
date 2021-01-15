@@ -7,7 +7,7 @@ const config = {
 const styles = {
   global: (props) => ({
     "html, body": {
-      color: props.colorMode === "dark" ? "gray.300" : "gray.600",
+      color: props.colorMode === "dark" ? "gray.400" : "gray.600",
       lineHeight: "tall",
     }
   })
