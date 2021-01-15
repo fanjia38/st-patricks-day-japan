@@ -1,13 +1,17 @@
 import { extendTheme } from "@chakra-ui/react"
 
+const config = {
+  initialColorMode: "light",
+  useSystemColorMode: true,
+}
 const styles = {
-  global: {
+  global: (props) => ({
     "html, body": {
-      color: "gray.600",
+      color: props.colorMode === "dark" ? "gray.300" : "gray.600",
       lineHeight: "tall",
     }
-  }
+  })
 }
 
-const theme = extendTheme({ styles })
+const theme = extendTheme({ config, styles })
 export default theme

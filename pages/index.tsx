@@ -1,16 +1,20 @@
-import { Box, Center, Text, Heading } from '@chakra-ui/react'
+import { Box, Center, Text, Heading, useColorMode, useColorModeValue } from '@chakra-ui/react'
 
 import ParadeList from '../components/parade-list'
 
 const Index = ({list}) => {
+  // header, footer のカラーモード
+  const { colorMode, toggleColorMode } = useColorMode()
+  const color = useColorModeValue("white", "gray.800")
+
   return (
     <>
-      <Box p={4} bg="green.500" color="white">
+      <Box p={4} bg="green.500" color={color}>
         <Heading size="lg" mb={4}>セント・パトリックス・デー・パレード一覧</Heading>
         <Text fontSize="sm">日本国内で開催されているセントパトリックスデーのイベントをまとめました。</Text>
       </Box>
       <ParadeList list={list} />
-      <Center p={4} bg="green.500" color="white">
+      <Center p={4} bg="green.500" color={color}>
         <Text fontSize="sm" as="i">&copy; fanjia38</Text>
       </Center>
     </>
