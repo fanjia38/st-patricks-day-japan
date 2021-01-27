@@ -5,7 +5,7 @@ import dayjs from 'dayjs'
 import ContactList from './contact-list'
 
 function ParadeItem ({item}) {
-  const {id, name, prefecture, start, end, isCancel, description, contact} = item
+  const {id, name, prefecture, start, end, isCancel, description, site, facebook, twitter} = item
 
   const startDay = useMemo(() => dayjs(start), [start])
   const endDay = useMemo(() => dayjs(end), [end])
@@ -42,7 +42,7 @@ function ParadeItem ({item}) {
           <Text ml={4} align="right">{shceduleText}</Text>
         </HStack>
         <Text>{description}</Text>
-        <ContactList items={contact} />
+        <ContactList site={site} facebook={facebook} twitter={twitter} />
       </Box>
     </WrapItem>
   )
