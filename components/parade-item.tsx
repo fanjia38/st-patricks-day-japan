@@ -5,7 +5,7 @@ import dayjs from 'dayjs'
 import ContactList from './contact-list'
 
 function ParadeItem ({item}) {
-  const {id, name, prefecture, start, end, isCancel, description, site, facebook, twitter} = item
+  const {id, name, prefecture, start, end, cancel, description, site, facebook, twitter} = item
 
   const startDay = useMemo(() => dayjs(start), [start])
   const endDay = useMemo(() => dayjs(end), [end])
@@ -26,6 +26,10 @@ function ParadeItem ({item}) {
 
     return `${formatedStart}${isBetween ? '~' : ''}${formatedEnd}`
   }, [item])
+
+  const isCancel = useMemo(() => (
+    cancel === 'true'
+  ), [item])
 
   const isEnd = useMemo(() => (
     !isCancel && (end ? dayjs().isAfter(endDay) : dayjs().isAfter(startDay))
