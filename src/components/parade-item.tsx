@@ -1,12 +1,11 @@
-import { WrapItem, Box, Stack, HStack, Heading, Text, Badge } from '@chakra-ui/react'
+import React from 'react'
+import { WrapItem, Box, HStack, Heading, Text, Badge } from '@chakra-ui/react'
 import {useMemo} from 'react'
 import dayjs from 'dayjs'
-
 import ContactList from './contact-list'
+import type { Item } from '../types/parade-info'
 
-function ParadeItem ({item}) {
-  const {id, name, prefecture, start, end, cancel, description, site, facebook, twitter} = item
-
+const ParadeItem: React.FC<Item> = ({id, name, prefecture, start, end, cancel, description, site, facebook, twitter}: Item) => {
   const startDay = useMemo(() => dayjs(start), [start])
   const endDay = useMemo(() => dayjs(end), [end])
 
@@ -25,15 +24,15 @@ function ParadeItem ({item}) {
     const isBetween = !isSameDay || hasTime
 
     return `${formatedStart}${isBetween ? '~' : ''}${formatedEnd}`
-  }, [item])
+  }, [startDay, endDay])
 
   const isCancel = useMemo(() => (
     cancel === 'true'
-  ), [item])
+  ), [cancel])
 
   const isEnd = useMemo(() => (
     !isCancel && (end ? dayjs().isAfter(endDay) : dayjs().isAfter(startDay))
-  ), [item])
+  ), [isCancel, endDay, startDay])
 
   return (
     <WrapItem key={id} p={4} borderWidth={1} borderRadius="lg" w="500px">

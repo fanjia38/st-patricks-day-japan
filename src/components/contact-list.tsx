@@ -1,7 +1,12 @@
+import React from 'react'
 import { HStack, Box, Link, IconButton } from '@chakra-ui/react'
 import { FaHome, FaTwitter, FaFacebookF } from 'react-icons/fa'
 
-function IconLink({url, icon}) {
+interface IconLinkProps {
+  url: string
+  icon: React.ReactElement
+}
+const IconLink: React.FC<IconLinkProps> = ({url, icon}: IconLinkProps) => {
   return (
     <Box>
       <Link href={url}>
@@ -21,7 +26,7 @@ interface Props {
   facebook: string
   twitter: string
 }
-function ContactList({site, facebook, twitter}: Props) {
+const ContactList: React.FC<Props> = ({site, facebook, twitter}: Props) => {
   return (
     <HStack mt={4}>
       {site && (
