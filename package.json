@@ -15,7 +15,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint --fix './{pages,src,styles}/**/*.{ts,tsx}'",
     "prettier": "prettier-standard --write './{pages,src,styles}/**/*.{ts,tsx}'",
-    "format": "lint:fix && prettier"
+    "format": "yarn lint:fix && yarn prettier"
   },
   "devDependencies": {
     "@storybook/react": "^6.1.11",
