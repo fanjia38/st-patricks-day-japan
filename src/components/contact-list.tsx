@@ -11,9 +11,9 @@ const IconLink = ({ url, icon }: IconLinkProps): ReactElement => {
     <Box>
       <Link href={url}>
         <IconButton
-          variant="outline"
-          colorScheme="teal"
-          aria-label="web site"
+          variant='outline'
+          colorScheme='teal'
+          aria-label='web site'
           icon={icon}
         />
       </Link>
@@ -29,24 +29,9 @@ interface Props {
 const ContactList = ({ site, facebook, twitter }: Props): ReactElement => {
   return (
     <HStack mt={4}>
-      {site && (
-        <IconLink
-          url={site}
-          icon={<FaHome />}
-        />
-      )}
-      {facebook && (
-        <IconLink
-          url={facebook}
-          icon={<FaFacebookF />}
-        />
-      )}
-      {twitter && (
-        <IconLink
-          url={twitter}
-          icon={<FaTwitter />}
-        />
-      )}
+      {site && <IconLink url={site} icon={<FaHome />} />}
+      {facebook && <IconLink url={facebook} icon={<FaFacebookF />} />}
+      {twitter && <IconLink url={twitter} icon={<FaTwitter />} />}
     </HStack>
   )
 }
