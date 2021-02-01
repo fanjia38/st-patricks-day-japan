@@ -1,11 +1,11 @@
-import React from 'react'
+import { ReactElement, useMemo } from 'react'
 import { WrapItem, Box, HStack, Heading, Text, Badge } from '@chakra-ui/react'
-import {useMemo} from 'react'
+
 import dayjs from 'dayjs'
 import ContactList from './contact-list'
 import type { Item } from '../types/parade-info'
 
-const ParadeItem: React.FC<Item> = ({id, name, prefecture, start, end, cancel, description, site, facebook, twitter}: Item) => {
+const ParadeItem = ({ id, name, prefecture, start, end, cancel, description, site, facebook, twitter }: Item): ReactElement => {
   const startDay = useMemo(() => dayjs(start), [start])
   const endDay = useMemo(() => dayjs(end), [end])
 
