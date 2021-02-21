@@ -12,10 +12,12 @@ const ParadeItem = ({
   start,
   end,
   cancel,
+  online,
   description,
   site,
   facebook,
-  twitter
+  twitter,
+  link
 }: Item): ReactElement => {
   const startDay = useMemo(() => dayjs(start), [start])
   const endDay = useMemo(() => dayjs(end), [end])
@@ -39,6 +41,8 @@ const ParadeItem = ({
     return `${formatedStart}${isBetween ? '~' : ''}${formatedEnd}`
   }, [startDay, endDay])
 
+  const isOnline = useMemo(() => online === 'true', [online])
+
   const isCancel = useMemo(() => cancel === 'true', [cancel])
 
   const isEnd = useMemo(
@@ -53,6 +57,7 @@ const ParadeItem = ({
         <Heading size='md'>{name}</Heading>
         <HStack justify='flex-end' mt='4'>
           {isCancel && <Badge colorScheme='yellow'>開催中止</Badge>}
+          {isOnline && <Badge colorScheme='blue'>オンライン開催</Badge>}
           {isEnd && <Badge>イベント終了</Badge>}
           <Badge colorScheme='green'>{prefecture}</Badge>
           <Text ml={4} align='right'>
@@ -60,7 +65,12 @@ const ParadeItem = ({
           </Text>
         </HStack>
         <Text>{description}</Text>
-        <ContactList site={site} facebook={facebook} twitter={twitter} />
+        <ContactList
+          site={site}
+          facebook={facebook}
+          twitter={twitter}
+          link={link}
+        />
       </Box>
     </WrapItem>
   )

@@ -5,8 +5,10 @@ export interface Item {
   start: string
   end: string
   cancel: 'true' | 'false'
+  online: 'true' | 'false'
   description: string
   site: string
   facebook: string
   twitter: string
+  link: string
 }
