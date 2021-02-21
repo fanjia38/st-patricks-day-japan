@@ -14,7 +14,7 @@ const Index: NextPage<Props> = ({ list }: Props) => {
     <>
       <Box p={4} bg='green.500' color={color}>
         <Heading size='lg' mb={4}>
-          セント・パトリックス・デー・パレード一覧
+          セント・パトリックス・デー・パレード in Japan
         </Heading>
         <Text fontSize='sm'>
           日本国内で開催されているセントパトリックスデーのイベントをまとめました。
