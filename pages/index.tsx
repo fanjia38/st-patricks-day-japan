@@ -17,7 +17,8 @@ const Index: NextPage<Props> = ({ list }: Props) => {
           セント・パトリックス・デー・パレード in Japan
         </Heading>
         <Text fontSize='sm'>
-          日本国内で開催されているセントパトリックスデーのイベントをまとめました。
+          3月17日はアイルランドの聖人・聖パトリックの命日 ☘️<br />
+          この日を祝う日本国内で開催されているセントパトリックスデーのイベントをまとめました。
         </Text>
       </Box>
       <ParadeList list={list} />
