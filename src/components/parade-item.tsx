@@ -1,5 +1,5 @@
 import { ReactElement, useMemo } from 'react'
-import { WrapItem, Box, HStack, Heading, Text, Badge } from '@chakra-ui/react'
+import { WrapItem, VStack, HStack, Heading, Text, Badge } from '@chakra-ui/react'
 
 import dayjs from 'dayjs'
 import ContactList from './contact-list'
@@ -53,7 +53,7 @@ const ParadeItem = ({
 
   return (
     <WrapItem key={id} p={4} borderWidth={1} borderRadius='lg' w='500px'>
-      <Box width='100%'>
+      <VStack width='100%' height="100%" alignItems="normal">
         <Heading size='md'>{name}</Heading>
         <HStack justify='flex-end' mt='4'>
           {isCancel && <Badge colorScheme='yellow'>開催中止</Badge>}
@@ -71,7 +71,7 @@ const ParadeItem = ({
           twitter={twitter}
           link={link}
         />
-      </Box>
+      </VStack>
     </WrapItem>
   )
 }
