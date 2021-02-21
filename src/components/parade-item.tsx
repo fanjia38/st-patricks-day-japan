@@ -65,12 +65,14 @@ const ParadeItem = ({
           </Text>
         </HStack>
         <Text>{description}</Text>
-        <ContactList
-          site={site}
-          facebook={facebook}
-          twitter={twitter}
-          link={link}
-        />
+        <div style={{marginTop: 'auto', paddingTop: '0.5rem'}}>
+          <ContactList
+            site={site}
+            facebook={facebook}
+            twitter={twitter}
+            link={link}
+          />
+        </div>
       </VStack>
     </WrapItem>
   )

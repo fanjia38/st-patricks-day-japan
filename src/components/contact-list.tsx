@@ -29,7 +29,7 @@ interface Props {
 }
 const ContactList = ({ site, facebook, twitter, link }: Props): ReactElement => {
   return (
-    <HStack mt="auto">
+    <HStack>
       {site && <IconLink url={site} icon={<FaHome />} />}
       {facebook && <IconLink url={facebook} icon={<FaFacebookF />} />}
       {twitter && <IconLink url={twitter} icon={<FaTwitter />} />}
